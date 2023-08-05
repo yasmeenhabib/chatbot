@@ -1,0 +1,266 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    position: relative;
+}
+
+.chat-container {
+    max-width: 400px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+   
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+
+        display: flex;
+    flex-direction: column;
+    height: 95%;
+    width: 350px;
+}
+
+.chat-display {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+
+    background-color: #F4EEE6;
+
+}
+
+
+.chat-display {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.chat-header {
+    display: flex;
+    justify-content: flex-start;
+  
+        display: flex;
+    align-items: center;
+    background-color: #025A4E; /* Green color as of WhatsApp */
+    padding: 5px;
+    border-radius: 5px 5px 0 0;
+}
+
+
+
+
+
+.profile-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: white;
+}
+/*.profile-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+*/
+.status {
+    font-size: 15px;
+    color: white    ;
+}
+.whatsapp-bubble {
+    
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.whatsapp-bubble::before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 10px 0 10px 12px;
+    border-color: transparent #25d366;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.whatsapp-bubble-text {
+    font-weight: bold;
+    color: white;
+}
+
+.status-text {
+    color: white;
+    font-size: 12px;
+}
+
+
+.bot-message {
+    background-color: white;
+    color: #025A4E;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+.user-input {
+    display: flex;
+    
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+/* ... Your existing CSS styles ... */
+
+.close-button {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    margin-left: auto;
+}
+
+
+.message-container {
+    display: flex;
+    justify-content: flex-start;
+    /*align-items: center;*/
+    margin-bottom: 10px;
+}
+
+.message-container.user-message {
+    justify-content: flex-end;
+}
+/*
+.bot-message,
+.user-message {
+    background-color: #DCF8C6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    max-width: 70%;
+}
+
+.user-message {
+    background-color: #B2DFFC;
+}
+
+
+
+.predefined-messages span {
+    /* ... Your existing styles ... 
+    cursor: pointer;
+}
+ ... Your existing CSS styles ... */
+/*
+.bot-message {
+/*    align-self: flex-start;*/
+ /*   background-color: #DCF8C6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    max-width: 70%;
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: #DCF8C6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    max-width: 70%;
+}
+
+.predefined-messages {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.predefined-messages span {
+    background-color: #DCF8C6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+*/
+.bot-messages,
+.predefined-messages,
+.user-messages {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.bot-message,
+.user-message {
+    background-color: #FFFFFF; /* White background */
+    color: #025A4E; /* Green text color */
+    padding: 16px 22px;
+    border-radius: 15px;
+        max-width: 70%;
+        line-height: 26.5px;
+}
+
+.bot-message {
+    align-self: flex-start; /* Align bot messages on the left */
+}
+
+.user-message {
+    align-self: flex-end; /* Align user messages on the right */
+    background-color: #D4EDE4;
+border: 1px solid #D4EDE4; /* Green border */
+}
+
+.predefined-message {
+    /* ... Your existing styles ... */
+    display: flex;
+    flex-wrap: wrap;
+   
+    justify-content: flex-start;
+     padding: 16px 22px;
+    border-radius: 29px;
+    margin: 3px;
+    cursor: pointer;
+    border: 1px solid #025A4E;
+    color: #025A4E;
+    /* height: 32px; */
+    text-align: left;
+    width: max-content;
+    /*display: flex;  Align predefined messages on the left */
+}
+
+
+.predefined-message span {
+    
+    padding: 16px 22px;
+    border-radius: 29px;
+    margin: 3px;
+    cursor: pointer;
+    border: 1px solid #025A4E;
+    color: #025A4E;
+    /* height: 32px; */
+    text-align: left;
+    width: max-content;
+    display: flex;
+}
